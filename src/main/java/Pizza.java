@@ -1,4 +1,5 @@
 public class Pizza {
+
   //Fix this method
   public static void cookPizza() throws InterruptedException {
 
@@ -17,6 +18,7 @@ public class Pizza {
 
       for (Thread step : cookingSteps) {
           step.start();
+          step.join(); // added
       }
   }
 
